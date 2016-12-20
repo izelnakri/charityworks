@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('public', function() {
+  this.route('public', { path: '/' }, function() {
     this.route('homepage', { path: '/' });
 
     this.route('contact');
