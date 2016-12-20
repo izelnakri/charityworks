@@ -28,6 +28,22 @@ app.get('/users', (req, res) => {
   });
 });
 
+app.get('/charities', (req, res) => {
+  if (req.query.slug) {
+    return db.Charity.findOne({
+      where: {
+        slug: req.query.slug
+      }
+    }).then((charity) => {
+      res.json({ charity: charity });
+    });
+  }
+
+  db.Charity.findAll().then((charities) => {
+    res.json({ charities: charities });
+  });
+});
+
 
 db.sequelize.sync().then(() => {
   app.listen(3000, () => {

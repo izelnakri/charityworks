@@ -1,0 +1,19 @@
+<!-- As a link -->
+<nav class="navbar navbar-light bg-faded">
+  {{#link-to "public.homepage" class="navbar-brand" href="#"}}CharityWorks{{/link-to}}
+</nav>
+
+
+<section class="container">
+  {{outlet}}
+</section>
+
+<nav class="navbar navbar-light bg-faded">
+  <ul class="navbar nav float-xs-right">
+    <li class="nav-item">
+      {{#link-to "public.contact" class="nav-link text-muted"}}Contact{{/link-to}}
+    </li>
+  </ul>
+</nav>
+
+{{#modals/modal-manager}}{{/modals/modal-manager}}

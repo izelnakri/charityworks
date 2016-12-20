@@ -1,0 +1,17 @@
+<div class="modal-dialog {{dialogClassNames}}" role="document">
+  <div class="modal-content">
+    {{#if header}}
+      <div class="modal-header">
+        <button class="close" aria-label="Close" data-dismiss="modal" type="button">
+
+        </button>
+
+        {{#if title}}
+          <h5 class="modal-title">{{title}}</h5>
+        {{/if}}
+      </div>
+    {{/if}}
+
+    {{yield}}
+  </div>
+</div>

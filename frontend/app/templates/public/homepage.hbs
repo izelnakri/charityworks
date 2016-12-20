@@ -1,0 +1,25 @@
+{{#each model as |charity|}}
+  <div class="card card-block">
+    <div class="row">
+      <div class="col-xs-4">
+        <img class="img-fluid" src="{{charity.logoURL}}" alt="{{charity.title}}" />
+      </div>
+      <div class="col-xs-5">
+        {{#link-to "public.charity" charity}}
+          <h3>{{charity.title}}</h3>
+        {{/link-to}}
+
+        <p>{{charity.description}}</p>
+      </div>
+
+      <div class="col-xs-3 text-xs-right">
+        <p>
+          Environment, Human Rights
+        </p>
+        <button type="button" class="btn btn-success btn-block btn-lg" {{action 'openDonateWindow' charity}}>Donate!</button>
+      </div>
+    </div>
+  </div>
+{{/each}}
+
+{{outlet}}
