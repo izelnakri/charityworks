@@ -5,7 +5,9 @@
         <img class="img-fluid" src="{{charity.logoURL}}" alt="{{charity.title}}" />
       </div>
       <div class="col-xs-5">
-        <h3>{{charity.title}}</h3>
+        {{#link-to "public.charity" charity}}
+          <h3>{{charity.title}}</h3>
+        {{/link-to}}
 
         <p>{{charity.description}}</p>
       </div>

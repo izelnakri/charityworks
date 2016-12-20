@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('public', { path: '/' }, function() {
     this.route('homepage', { path: '/' });
 
+    this.route('charity', { path: '/:slug' });
+
     this.route('contact');
 
     this.route('register');

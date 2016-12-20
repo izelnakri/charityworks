@@ -1,3 +1,4 @@
+const slug = require('slug');
 const moment = require('moment');
 const db = require('./../models');
 
@@ -9,6 +10,7 @@ var charities = [
     logoURL: 'http://www.gatesfoundation.org/~/media/GFO/Site/Logo-Images/icon_small_bill_melinda_gates_foundation_logo.png',
     areasServed: 'Worldwide',
     endowment: 3679000,
+    slug: slug('Bill & Melinda Gates Foundation'),
     foundedAt: moment('01-01-1997').toDate()
   },
   {
@@ -18,6 +20,7 @@ var charities = [
     logoURL: 'https://lh3.googleusercontent.com/-Q1Fb4sFBX1g/AAAAAAAAAAI/AAAAAAAAu-o/FO6np4OsF-M/s0-c-k-no-ns/photo.jpg',
     areasServed: 'Worldwide',
     endowment: 236900000,
+    slug: slug('Greenpeace'),
     foundedAt: moment('01-01-1971').toDate()
   },
   {
@@ -27,6 +30,7 @@ var charities = [
     logoURL: 'https://lh6.googleusercontent.com/-a9FeWAShrmo/AAAAAAAAAAI/AAAAAAAACw8/oPJSzr3FqU0/s0-c-k-no-ns/photo.jpg',
     areasServed: 'Worldwide',
     endowment: 10000000, // fake
+    slug: slug('Habitat for Humanity'),
     foundedAt: moment('01-01-1965').toDate()
   },
 ];

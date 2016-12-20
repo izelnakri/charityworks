@@ -9,7 +9,8 @@ export default Model.extend({
   foundedAt: attr('date'),
   employeeCount: attr('number'),
   areasServed: attr(),
-  endowment: attr('number')
-  
+  endowment: attr('number'),
+  slug: attr()
+
   // categories: hasMany()
 });

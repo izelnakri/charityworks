@@ -25,6 +25,11 @@ module.exports = function(sequelize, DataTypes) {
     },
     foundedAt: {
       type: DataTypes.DATE
+    },
+    slug: {
+      type: DataTypes.STRING,
+      unique: true,
+      alowNull: false
     }
   }, {
     classMethods: {
