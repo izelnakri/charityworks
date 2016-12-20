@@ -1,0 +1,19 @@
+<!-- As a link -->
+<nav class="navbar navbar-light bg-faded" style="position: fixed; top: 0px; width: 100%">
+  <a class="navbar-brand" href="#">CharityWorks</a>
+</nav>
+
+
+<section class="container" style="padding-top: 54px">
+  {{outlet}}
+</section>
+
+
+<!-- As a link -->
+<nav class="navbar navbar-light bg-faded" style="position: fixed; bottom: 0px; width: 100%">
+  <ul class="navbar nav float-xs-right">
+    <li class="nav-item">
+      {{#link-to "public.contact" class="nav-link text-muted"}}Contact{{/link-to}}
+    </li>
+  </ul>
+</nav>
