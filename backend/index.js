@@ -28,6 +28,12 @@ app.get('/users', (req, res) => {
   });
 });
 
+app.get('/charities', (req, res) => {
+  db.Charity.findAll().then((charities) => {
+    res.json({ charities: charities });
+  });
+});
+
 
 db.sequelize.sync().then(() => {
   app.listen(3000, () => {
