@@ -1,0 +1,9 @@
+{{#if icon}}
+  {{#cl-icon icon}}{{/cl-icon}}
+{{/if}}
+
+{{yield}}
+
+{{#if loading}}
+  {{#cw-icon "spinner" spin=true class="saving"}}{{/cw-icon}}
+{{/if}}

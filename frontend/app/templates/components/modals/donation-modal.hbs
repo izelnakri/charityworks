@@ -1,3 +1,17 @@
 {{#cw-modal title=title size="large"}}
-
+  <section class="modal-body">
+    <div class="row">
+      <div class="col-xs-6">
+        {{#cw-form model=model as |form|}}
+          {{form.input type="number" label="Amount" attribute="amount"}}
+          {{form.input type="text" label="Full Name" attribute="donor"}}
+          {{form.input type="text" label="Credit Card Number" attribute="creditCardNo"}}
+          {{form.textarea label="Message" attribute="message"}}
+        {{/cw-form}}
+      </div>
+    </div>
+  </section>
+  <div class="modal-footer">
+    <button type="button" {{action "sendDonation" model}} class="btn btn-success btn-lg">Donate</button>
+  </div>
 {{/cw-modal}}

@@ -1,0 +1,14 @@
+<label>
+  {{#if checked}}
+    <input checked={{checked}} type="checkbox" value={{value}} />
+  {{else}}
+    <input type="checkbox" value={{value}} />
+  {{/if}}
+
+  <span class="sz-indicator"></span>
+  <span>{{label}}</span>
+</label>
+
+{{#if hint}}
+  <span class="text-muted">{{hint}}</span>
+{{/if}}

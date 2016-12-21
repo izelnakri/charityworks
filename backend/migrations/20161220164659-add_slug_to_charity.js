@@ -2,7 +2,7 @@
 
 module.exports = {
   up: function (queryInterface, Sequelize) {
-    queryInterface.addColumn('Charities', 'slug', {
+    return queryInterface.addColumn('Charities', 'slug', {
       allowNull: false,
       type: Sequelize.STRING,
       unique: true
@@ -17,7 +17,7 @@ module.exports = {
   },
 
   down: function (queryInterface, Sequelize) {
-    queryInterface.removeColumn('Charities', 'slug');
+    return queryInterface.removeColumn('Charities', 'slug');
     /*
       Add reverting commands here.
       Return a promise to correctly handle asynchronicity.

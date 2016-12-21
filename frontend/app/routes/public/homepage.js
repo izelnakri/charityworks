@@ -8,7 +8,9 @@ export default Ember.Route.extend({
   actions: {
     openDonateWindow(charity) {
       console.log('calls openDonateWindow action');
-      return this.get('modals').open('donation-modal', charity);
+      return this.get('modals').open('donation-modal', this.get('store').createRecord('Donation', {
+        charity: charity
+      }));
     }
   }
 });
